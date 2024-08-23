@@ -1,0 +1,7 @@
+@if (!list) {
+    <img src="loading_gif.gif" />
+  }@else if (list.length === 0) {
+    <p>No  content to show</p>
+  }@else {
+    <ng-content select="[content]"></ng-content>
+  }
