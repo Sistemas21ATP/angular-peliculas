@@ -1,0 +1,12 @@
+<h4>{{title}}</h4>
+
+<div>
+    <button type="button" mat-raised-button (click)="uploadArchive.click()">Selecionar imagen</button>
+    <input type="file" hidden #uploadArchive accept="image/*" (change)="cambio($event)">
+</div>
+
+<div>
+    @if(urlCurrent){
+        <img [src]="urlCurrent" width="169" height="250">
+    }
+</div>

@@ -1,19 +1,21 @@
 import { Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { FormGenerosComponent } from "../form-generos/form-generos.component";
+import { GeneroCreacionDTO } from '../generos';
 
 @Component({
   selector: 'app-crear-generos',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [FormGenerosComponent],
   templateUrl: './crear-generos.component.html',
   styleUrl: './crear-generos.component.css'
 })
 export class CrearGenerosComponent {
-  router = inject(Router);
+  private router = inject(Router);
 
-  saveChanges(){
+  saveChanges(genero: GeneroCreacionDTO){
     // save
-    this.router.navigate(['/gen']);
+    // this.router.navigate(['/gen']);
+    console.log(genero);
   }
 }
