@@ -65,7 +65,7 @@ export class FormActoresComponent implements OnInit{
   }
 
   getNameError(){
-    let field = this.form.controls.birthDate
+    let field = this.form.controls.name
     if(field.hasError('required')){
       return "El nombre es requerido";
     }

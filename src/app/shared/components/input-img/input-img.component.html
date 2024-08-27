@@ -6,7 +6,10 @@
 </div>
 
 <div>
-    @if(urlCurrent){
+    @if(imagenBase64){
+        <img [src]="imagenBase64" width="169" height="250">
+    }
+    @else if(urlCurrent){
         <img [src]="urlCurrent" width="169" height="250">
     }
 </div>
